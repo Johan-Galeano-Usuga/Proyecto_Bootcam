@@ -1,2 +1,2 @@
 # Proyecto_Bootcam
-Repositorio para guardar el proyecto que se reaizo en el bootcam de Talento Tech.
+Repositorio para guardar el proyecto que se realizo en el bootcam de Talento Tech.
