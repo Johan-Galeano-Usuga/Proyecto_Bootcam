@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Energía Renovable en Colombia (2015–2023)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/styles_Niv_Nac.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Energias Renovables a Nivel Nacional</h1>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <section class="texto">
+      <img src="img/img_Nacion/colombia.png" alt="Mapa de Colombia" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px #0002;">
+    </section>
+    <section>
+      <div class="grafico">
+        <h2>Energías Renovables en Colombia (2015–2023)</h2>
+        <p> Colombia ha avanzado significativamente en la incorporación de energías renovables, aunque su matriz energética sigue dominada por la generación hidroeléctrica. A continuación se describen las principales fuentes y su ubicación:
+        </p>
+      </div>
+      <div class="mini-secciones-grid">
+        <div class="mini-extra">
+          <h3>🔵 Hidroeléctrica</h3>
+          <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+          <div class="info-extra" style="display:none;">
+            <p>
+              La energía hidroeléctrica es la fuente principal de electricidad en Colombia. Se concentra en las regiones andinas, donde los ríos Magdalena, Cauca y sus afluentes permiten el funcionamiento de grandes centrales como Guavio (Cundinamarca), San Carlos (Antioquia) y Betania (Huila). Esta fuente representa la mayor proporción de energía renovable en el país.
+            </p>
+          </div>
+        </div>
+        <div class="mini-extra">
+          <h3>🟡 Solar</h3>
+          <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+          <div class="info-extra" style="display:none;">
+            <p>
+              El desarrollo de parques solares se ha acelerado en los últimos años. Los departamentos con mayor capacidad instalada son Córdoba, Cesar, Santander, y partes del Atlántico y Valle del Cauca. Estas zonas cuentan con alta radiación solar, ideal para la expansión de esta fuente limpia.
+            </p>
+          </div>
+        </div>
+        <div class="mini-extra">
+          <h3>🟣 Eólica</h3>
+          <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+          <div class="info-extra" style="display:none;">
+            <p>
+              La energía eólica está en etapa de consolidación, con un inmenso potencial en la región de La Guajira, donde ya funcionan parques como Jepírachi y Guajira 1. Esta zona presenta vientos constantes y fuertes, lo que la convierte en un punto clave para el futuro energético del país.
+            </p>
+          </div>
+        </div>
+        <div class="mini-extra">
+          <h3>🌸 Bioenergía </h3>
+          <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+          <div class="info-extra" style="display:none;">
+            <p>
+              La bioenergía proviene de residuos orgánicos, biomasa agrícola y biogás. Tiene presencia en regiones como el Valle del Cauca, por su actividad cañera, y en grandes ciudades donde se aprovechan residuos sólidos. Su participación es baja, pero tiene potencial en economías circulares y rurales.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="ver-comparativa" style="margin:32px 0 0 0; text-align:center;">
+        <h2 style="margin-bottom:12px; color:#5d8736;">VER GRÁFICAS COMPARATIVAS</h2>
+        <a href="../../Comparativa/index.html" class="btn-comparativa" style="display:inline-block; background:#809d3c; color:#fff; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em; transition:background 0.2s;">Ir a Comparativa</a>
+      </div>
+      <div class="grafico" style="margin-top:20px;">
+        <h2>Gráfica de Energía Renovable</h2>
+        <canvas id="energiaChart" width="600" height="300"></canvas>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div>Anggy Estefania Marin Bernal <a class="correo" href="mailto:anggy.estefa@gmail.com" title="anggy.estefa@gmail.com">📧 Contacto</a></div>
+    <div>Johan Galeano Usuga <a class="correo" href="mailto:Johan.galeano@udea.edu.co" title="Johan.galeano@udea.edu.co">📧 Contacto</a></div>
+    <div>Paulina Diaz Barrios <a class="correo" href="mailto:paulina.diazb@udea.edu.co" title="paulina.diazb@udea.edu.co">📧 Contacto</a></div>
+  </footer>
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+  <script src="js/energia_nacionalChart.js"></script>
+</body>
+</html>

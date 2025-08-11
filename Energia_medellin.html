@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Energía Renovable en Medellín-Antíoquia (2015–2023)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/styles_Med.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Energías Renovable en Medellín-Antíoquia (2015–2023)</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+    </ul>
+  </nav>
+
+  <div class="bogota-top">
+    <section class="bogota-img">
+      <img src="img/img_Medell/medellin.jpg" alt="Medellín" />
+    </section>
+    <section class="bogota-info">
+      <h2>Sobre Medellín</h2>
+      <p>Medellín, capital de Antioquia, es reconocida por su innovación, desarrollo urbano y avances en energías limpias. Es pionera en movilidad eléctrica y proyectos de energías renovables en Colombia.</p>
+      <a class="bogota-link" href="https://www.medellin.gov.co/" target="_blank">Visita la página oficial de Medellín</a>
+    </section>
+  </div>
+
+  <div class="main-content">
+    <section class="texto">
+      <h2>Capacidad Instalada de Energía Renovable en Medellín-Antíoquia (MW)</h2>
+      <p>La matriz energética de Medellín y Antioquia se basa principalmente en la hidroelectricidad, con centrales como Hidroituango, operadas por EPM. Esta empresa también fue pionera en energía eólica con el Parque Jepírachi (19,5 MW), que operó hasta 2023.
+Aunque la radiación solar en Medellín no es tan constante, existen proyectos solares residenciales y comunitarios en crecimiento. Destaca la comunidad energética del barrio El Salvador, donde los vecinos generan energía solar y la venden al sistema nacional, marcando un modelo innovador de participación ciudadana y transición energética.</p>
+    </section>
+    <section class="grafico">
+      <canvas id="medellinChart" width="800" height="400"></canvas>
+    </section>
+  </div>
+
+  <div class="secciones-extra">
+    <section class="extra">
+      <h3>Parque Eólico Jepírachi (La Guajira)</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>Primer parque eólico de Colombia, con 19,5 MW de capacidad, operó desde 2004 hasta su retiro en octubre de 2023. Fue un esfuerzo pionero en energía eólica bajo el esquema de Mecanismo de Desarrollo Limpio (MDL).</p>
+      </div>
+    </section>
+    <section class="extra">
+      <h3>Comunidad Energética Solar – Barrio El Salvador (Medellín)</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>Primera comunidad en el país que genera y vende energía solar al SIN. Impulsada por EPM, Universidad EIA, ERCO, NEU y UCL, refleja un modelo innovador de generación distribuida y participación ciudadana </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+  <script src="js/medellinChart.js"></script>
+
+  <footer class="footer">
+    <div>Anggy Estefania Marin Bernal <a class="correo" href="mailto:anggy.estefa@gmail.com" title="anggy.estefa@gmail.com">📧 Contacto</a></div>
+    <div>Johan Galeano Usuga <a class="correo" href="mailto:Johan.galeano@udea.edu.co" title="Johan.galeano@udea.edu.co">📧 Contacto</a></div>
+    <div>Paulina Diaz Barrios <a class="correo" href="mailto:paulina.diazb@udea.edu.co" title="paulina.diazb@udea.edu.co">📧 Contacto</a></div>
+  </footer>
+
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+  <script src="js/medellinChart.js"></script>
+</body>
+</html>

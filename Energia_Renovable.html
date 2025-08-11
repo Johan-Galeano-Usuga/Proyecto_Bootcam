@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Energía Renovable: Bogotá vs Medellín</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/styles_Ene_Ren.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Energias Renovables </h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="main-content">
+    <section class="texto">
+      <h2>Informacion</h2>
+      <p>Durante el periodo 2015 a 2023, el desarrollo de las fuentes renovables en Colombia estuvo marcado por el claro predominio de la hidroelectricidad, la cual aportó consistentemente entre el 95% y 98% del total de generación proveniente de fuentes renovables. La energía solar mostró un crecimiento significativo, pasando de representar menos del 0.1% en 2015 a alcanzar cerca del 4.7% en 2023. Este aumento ha sido impulsado principalmente desde 2020, gracias al desarrollo de políticas públicas, subastas de energías limpias, y la reducción de costos tecnológicos.
+      En contraste, la energía eólica permaneció estancada durante ese mismo periodo, con una participación constante de alrededor del 0.13–0.15 %, debido a que el único parque operativo era Jepírachi, ubicado en La Guajira, y que fue retirado del sistema en 2023.
+      Por otro lado, la generación mediante biomasa y residuos osciló entre el 2.0% y 2.8%, mostrando un leve crecimiento. Esta fuente alcanzó una capacidad instalada de aproximadamente 353MW en 2023, y representa una alternativa con potencial en zonas agroindustriales del país</p>
+    </section>
+    <section class="grafico">
+      <canvas id="colombiaChart" width="800" height="400"></canvas>
+    </section>
+
+  </div>
+
+  <div class="secciones-extra">
+    <section class="extra">
+      <h3>En Medellin</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>En Medellín, la matriz eléctrica sigue dependiendo en gran medida de la energía hidráulica, aunque la ciudad, a través de Empresas Públicas de Medellín (EPM), ha sido pionera en recursos no convencionales. EPM lideró el Parque Eólico Jepírachi (~19.5 MW) bajo un mecanismo MDL
+      </div>
+    </section>
+    <section class="extra">
+      <h3>En Bogota</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>En Bogotá y su entorno, la generación eléctrica es principalmente hidráulica. Sin embargo, se están impulsando energías renovables distribuídas como biomasa y solar, especialmente en zonas no interconectadas (ZNI), aunque aún representan una pequeña fracción de la matriz energética.</p>
+      </div>
+    </section>
+    <section class="extra">
+      <h3>En Colombia</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>A nivel nacional, la generación renovable sigue dominada por la hidroelectricidad (~66–70 % de la capacidad total en 2023)
+Ambiente Soluciones
+SEI
+. No obstante, la solar y eólica estuvieron rondando apenas del 2 % en 2022, pero alcanzaron cerca del 9 % de la capacidad total instalada hacia 2024, impulsadas por nuevos proyectos y mayor registro en UPME 
+SEI
+. Por su parte, la biomasa se ubicó en torno a los 353 MW en 2023, equivalente al 2–3 % de la capacidad renovable</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+
+
+<footer class="footer">
+  <div>Anggy Estefania Marin Bernal <a class="correo" href="mailto:anggy.estefa@gmail.com" title="anggy.estefa@gmail.com">📧 Contacto</a></div>
+  <div>Johan Galeano Usuga <a class="correo" href="mailto:Johan.galeano@udea.edu.co" title="Johan.galeano@udea.edu.co">📧 Contacto</a></div>
+  <div>Paulina Diaz Barrios <a class="correo" href="mailto:paulina.diazb@udea.edu.co" title="paulina.diazb@udea.edu.co">📧 Contacto</a></div>
+</footer>
+  <script src="js/Energia_Renov.js"></script>
+</body>
+</html>

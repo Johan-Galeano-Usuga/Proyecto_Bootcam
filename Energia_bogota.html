@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Energía Renovable en Bogotá (2015–2023)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/stylesBog.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Energías Renovable en Bogotá(2015–2023)</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      
+      <li><a href="index.html">Inicio</a></li>
+    </ul>
+  </nav>
+
+  <div class="bogota-top">
+    <section class="bogota-img">
+      <img src="img/img_bog/bogota.jpg" alt="Bogotá" />
+    </section>
+    <section class="bogota-info">
+      <h2>Sobre Bogotá</h2>
+      <p>Bogotá, capital de Colombia, es el principal centro político, económico y cultural del país. Con una altitud de 2,640 metros, destaca por su diversidad, historia y desarrollo en energías renovables.</p>
+      <a class="bogota-link" href="https://bogota.gov.co/" target="_blank">Visita la página oficial de Bogotá</a>
+    </section>
+  </div>
+
+  <div class="main-content">
+    <section class="texto">
+      <h2>Capacidad Instalada de Energía renovable en Bogotá (MW)</h2>
+      <p>Bogotá‑Región se destaca por su elevado potencial solar, impulsado por altos niveles de radiación ultravioleta, lo que la posiciona como un enclave ideal para proyectos de energía solar y biomasa 
+Diez municipios —como Guatavita— han sido habilitados para instalar proyectos de energía renovable distribuida, con especial enfoque en solar, y ya cuentan con infraestructura en desarrollo</p>
+    </section>
+    <section class="grafico">
+      <canvas id="bogotaChart" width="800" height="400"></canvas>
+    </section>
+  </div>
+
+  <div class="secciones-extra">
+    <section class="extra">
+      <h3>Patio‑taller eléctrico y buses eléctricos de VGMobility</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>La empresa VGMobility entregó a Bogotá 195 buses eléctricos junto a un moderno patio-taller en Ciudad Bolívar. Este espacio está diseñado con infraestructura sostenible, como sistemas de reciclaje de aguas lluvias, y tiene capacidad para recargar hasta 183 buses simultáneamente</p>
+      </div>
+    </section>
+    <section class="extra">
+      <h3>Red pública de cargadores rápidos de Enel X</h3>
+      <input type="button" class="ver-mas" value="Ver más" onclick="mostrarInfo(this)">
+      <div class="info-extra" style="display:none;">
+        <p>Enel X está construyendo y mantiene la primera red pública de carga rápida para vehículos eléctricos en Bogotá. A diciembre de 2023, se ha puesto en operación una estación en La Alhambra con tres cargadores (150 kW y 60 kW), y se han habilitado otras en barrios como Modelia, Nicolás de Federmán y Chicó</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+
+  <script>
+    function mostrarInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.value = 'Ver menos';
+      } else {
+        info.style.display = 'none';
+        btn.value = 'Ver más';
+      }
+    }
+  </script>
+  <script src="js/bogotaChart.js"></script>
+
+  <footer class="footer">
+    <div>Anggy Estefania Marin Bernal <a class="correo" href="mailto:anggy.estefa@gmail.com" title="anggy.estefa@gmail.com">📧 Contacto</a></div>
+    <div>Johan Galeano Usuga <a class="correo" href="mailto:Johan.galeano@udea.edu.co" title="Johan.galeano@udea.edu.co">📧 Contacto</a></div>
+    <div>Paulina Diaz Barrios <a class="correo" href="mailto:paulina.diazb@udea.edu.co" title="paulina.diazb@udea.edu.co">📧 Contacto</a></div>
+  </footer>
+</body>
+</html>
